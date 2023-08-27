@@ -1,5 +1,3 @@
-import { getTodos } from "./api/route";
-
 export default function Home() {
   return (
     <div>
