@@ -3,18 +3,22 @@ import React from "react";
 import Slider from "react-slick";
 import { SliderItem } from "./SliderItem";
 import { iSliderItem } from "./types";
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
 const settings = {
   dots: false,
   infinite: true,
   speed: 500,
   slidesToShow:
-    typeof window !== "undefined" && window?.innerWidth > 1200
-      ? 4
-      : typeof window !== "undefined" && window?.innerWidth > 900
-      ? 3
-      : 2,
+    // typeof window !== "undefined" && window?.innerWidth > 1200
+    // ? 4
+    // : typeof window !== "undefined" && window?.innerWidth > 900
+    // ? 3
+    // : 2
+    3,
   slidesToScroll: 1,
+  nextArrow: <GrFormNext />,
+  prevArrow: <GrFormPrevious />,
 };
 const sliderItems: Array<iSliderItem> = [
   {
@@ -35,7 +39,7 @@ const sliderItems: Array<iSliderItem> = [
   {
     id: 4,
     title: "string",
-    url: "https://play-lh.googleusercontent.com/UjaAdTYsArv7zAJbqGWjQw2ftuOtnAlvokffC3TQQ2K12mwk0YdXUF2wZBTBA2kDZIk",
+    url: "https://media.wired.co.uk/photos/606d9a10751ea43ccd98845e/16:9/w_1280,c_limit/wired-uk-bestfilms.jpg",
   },
   {
     id: 5,

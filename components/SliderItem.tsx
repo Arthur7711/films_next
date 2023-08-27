@@ -12,7 +12,7 @@ export const SliderItem = ({ item }: { item: iSliderItem }) => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <h3 className="text-gray-300">{item.title}</h3>
+      <p className="text-gray-300">{item.title}</p>
       <div className="flex gap-3 items-center justify-start"></div>
     </div>
   );

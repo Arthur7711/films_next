@@ -112,3 +112,26 @@ body {
 .slick-arrow.slick-hidden {
   display: none;
 }
+.slick-arrow {
+  position: absolute;
+  top: 30%;
+  font-size: 50px;
+  z-index: 1;
+}
+.slick-arrow.slick-next {
+  right: 0;
+  /* visibility: hidden; */
+}
+/* .slick-arrow.slick-next::after {
+  visibility: visible;
+  content: ">";
+} */
+.slick-arrow.slick-prev {
+  left: 0px;
+  /* visibility: hidden; */
+}
+/* .slick-arrow.slick-prev::after {
+  visibility: visible;
+  content: "<";
+  left: 0 !important;
+} */
