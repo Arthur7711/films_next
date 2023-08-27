@@ -3,9 +3,9 @@ import { GlobalSearch } from "./GlobalSearch";
 
 export const Header = () => {
   const links = [
-    { path: "", name: "Top" },
-    { path: "", name: "Popular" },
-    { path: "", name: "All" },
+    { path: "./", name: "Top" },
+    { path: "#/", name: "Popular" },
+    { path: "#//", name: "All" },
   ];
   return (
     <header className=" bg-black h-20 flex flex-col gap-2 py-2 px-8">
