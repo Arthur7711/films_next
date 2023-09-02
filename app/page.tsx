@@ -42,13 +42,28 @@ const data = [
   },
 ];
 
-export default function Home() {
+async function getData() {
+  const res = await fetch("https://pokeapi.co/api/v2/pokemon");
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+  // console.log(res.json(), "rrrr");
+  return res.json();
+}
+
+export default async function Home() {
+  const pokemons = await getData();
   return (
     <div className=" flex justify-center">
       <div
         className="flex items-start p-5 flex-wrap gap-5"
         style={{ maxWidth: "60%" }}
       >
+        {/* <p>{JSON.stringify(pokemons)}</p> */}
         {data.map((el) => (
           <FilmItem
             key={el.id}
